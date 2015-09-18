@@ -8,7 +8,6 @@ import java.io.UnsupportedEncodingException;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 import java.util.Properties;
@@ -47,7 +46,7 @@ import com.google.common.io.Files;
 
 
 /**
- * Framework for applying user-defined processing to tabular data in Synaps
+ * Framework for applying user-defined processing to tabular data in Synapse
  * 
  * 
  * 
