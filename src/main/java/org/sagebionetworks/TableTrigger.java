@@ -47,14 +47,8 @@ import com.google.common.io.Files;
 
 
 /**
- * Scoring framework for ALS Stratification Challenge
+ * Framework for applying user-defined processing to tabular data in Synaps
  * 
- * Validation:
- * docker pull <submission>
- * 	if it fails, return the shell output
- * 
- * Run
- * docker 
  * 
  * 
  */
@@ -159,13 +153,7 @@ public class TableTrigger {
     public static String executeDockerCommand(String[] params, File workingDirectory) throws IOException {
    	    String dockerCommand = getProperty("DOCKER_COMMAND");
    	    List<String> envp = getDockerEnvParams();
-   	    if (false) {
-   	    	// just print out statement
-   	    	System.out.println(dockerCommand+" "+Arrays.asList(params)+" "+envp);
-   	    	return "OK";
-   	    } else {
-   	   		return executeShellCommand(dockerCommand, params, envp, workingDirectory);
-   	    }
+   		return executeShellCommand(dockerCommand, params, envp, workingDirectory);
     }
     
     public static String getDockerReferenceFromFileHandle(FileHandle fileHandle) {
